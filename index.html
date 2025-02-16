@@ -3,126 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="$PREGGY - The most desperate token launch in crypto history. Join the wildest ride of your life!">
+    <meta name="keywords" content="crypto, token, meme coin, preggy token, cryptocurrency">
+    <meta property="og:title" content="$PREGGY - The Survival Token">
+    <meta property="og:description" content="Join the most desperate token launch in crypto history!">
+    <!-- Security Headers -->
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' http[...]">
     <title>$PREGGY - The Survival Token</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: #ff0077;
-        }
-        h2 {
-            color: #ffcc00;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .highlight {
-            color: #ffcc00;
-            font-weight: bold;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: #fff;
-            background: #ff0077;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .btn:hover {
-            background: #ff3399;
-        }
-        .roadmap {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        .footer {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: gray;
-        }
-        .faq {
-            margin-top: 30px;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="game.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
+    <nav class="burger-menu" aria-label="Main navigation">
+        <button class="burger-icon" aria-expanded="false" aria-controls="menu-items">
+            <span class="visually-hidden">Toggle menu</span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-items" id="menu-items">
+            <a href="https://t.me/PREGGYTOKEN" target="_blank" rel="noopener noreferrer">📱 Telegram</a>
+            <a href="https://x.com/preggytoken" target="_blank" rel="noopener noreferrer">🐦 Twitter</a>
+        </div>
+    </nav>
 
-    <div class="container">
+    <main class="container">
         <h1>🚨 HELP. MY GIRLFRIEND IS PREGNANT. 🚨</h1>
-        <h2>Introduction: The Backstory</h2>
-        <p>Yo, FAM, I’m in deep <span class="highlight">sh*t</span>. My girl is <span class="highlight">12 days late</span>, and I might be <span class="highlight">completely rekt.</span> 🤯</p>
 
-        <p>Here’s the deal:</p>
-<p>👶 My girl is late. Way too late.<br>
-   👮 Her dad’s a cop (a very angry cop)<br>
-   🚫 Abortion? Illegal.<br>
-   ⚖️ Jail time? Very real possibility.<br>
-   💸 My bank account? $500 and a prayer.</p>
+        <section aria-labelledby="intro-heading" class="intro">
+            <h2 id="intro-heading">Introduction: The Backstory</h2>
+            <p>Yo, FAM, I'm in deep <span class="highlight">sh*t</span>. My girl is <span class="highlight">12 days late</span>, and I might be <span class="highlight">completely rekt.</span> 🤯</p>
 
-        <h2>Why $PREGGY? (The Master Plan)</h2>
-        <p>Since I can’t afford a lawyer, an escape plan, or even a proper pregnancy test without breaking the bank, there’s only one option left:</p>
+            <p>Here's the deal:</p>
+            <ul class="situation-list">
+                <li>👶 My girl is late. Way too late.</li>
+                <li>👮 Her dad's a cop (a very angry cop)</li>
+                <li>🚫 Abortion? Illegal.</li>
+                <li>⚖️ Jail time? Very real possibility.</li>
+                <li>💸 My bank account? $500 and a prayer.</li>
+            </ul>
+        </section>
 
-        <p>🚀 We’re launching a sh*tcoin.</p>
-        <p><span class="highlight">$PREGGY</span> is my last hope. Either this token pumps, or I’m doomed.<br>
-        This isn’t just a meme. This is a survival fund.</p>
+        <section aria-labelledby="why-heading" class="why">
+            <h2 id="why-heading">Why $PREGGY? (The Master Plan)</h2>
+            <p>Since I can't afford a lawyer, an escape plan, or even a proper pregnancy test without breaking the bank, there's only one option left:</p>
+            <p class="highlight-box">🚀 We're launching a sh*tcoin.</p>
+            <p>$PREGGY is my last hope. Either this token pumps, or I'm doomed.<br>
+            This isn't just a meme. This is a survival fund.</p>
+        </section>
 
-        <a href="#" class="btn">SEND ME TO THE MOON OR TO JAIL 🚀</a>
+        <!-- Updated Game Section -->
+        <section class="escape-game" aria-labelledby="game-heading">
+            <h2 id="game-heading">🎮 Run From Responsibility!</h2>
+            <p class="highlight-box">🏃 Collect 💰 and avoid 👮👶🤰</p>
+            <div class="game-container">
+                <canvas id="gameCanvas" width="320" height="480"></canvas>
+                <div class="game-controls">
+                    <div class="game-info">
+                        <div class="game-stats">
+                            <span id="score">Score: 0</span>
+                            <span id="highscore">Best: 0</span>
+                            <span id="level">Level: 1</span>
+                        </div>
+                        <div class="lives-display" id="lives">
+                            <span>❤️❤️❤️</span>
+                        </div>
+                    </div>
+                    <button id="startGame" class="game-button">🏃 Start Running!</button>
+                    <div class="mobile-controls">
+                        <button id="leftButton" class="control-button">⬅️</button>
+                        <button id="rightButton" class="control-button">➡️</button>
+                    </div>
+                </div>
+            </div>
+            <div class="game-instructions">
+                <p>🎯 Collect 💰 $PREGGY tokens for points</p>
+                <p>❌ Avoid: 👮 Angry Cop Dad | 👶 Baby | 🤰 Baby Mama</p>
+                <p>⌨️ Use ⬅️ ➡️ arrows or buttons to move</p>
+                <p>❤️ You have 3 lives - Don't get caught!</p>
+            </div>
+        </section>
 
-        <div class="roadmap">
-            <h2>Roadmap (If We Even Make It That Far)</h2>
-            <h3>Phase 1: Survive</h3>
-            <p>✅ Launch website & spread the story<br>
-               ✅ Get CT to believe in the Preggy Saga<br>
-               ✅ Prepare for launch (aka pray)</p>
+        <section class="roadmap" aria-labelledby="roadmap-heading">
+            <h2 id="roadmap-heading">Roadmap (If We Even Make It That Far)</h2>
+            <div class="phase">
+                <h3>Phase 1: Survive</h3>
+                <ul>
+                    <li>✅ Launch website & spread the story</li>
+                    <li>✅ Get CT to believe in the Preggy Saga</li>
+                    <li>✅ Prepare for launch (aka pray)</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <h3>Phase 2: The Pump & Escape Fund</h3>
+                <ul>
+                    <li>🚀 Launch $PREGGY on pump.fun</li>
+                    <li>🚀 Convince degens that my life depends on this</li>
+                    <li>🚀 Hope for a 100x before her dad finds out</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <h3>Phase 3: ???</h3>
+                <ul>
+                    <li>🤰 If we hit $1M MC, I propose</li>
+                    <li>🍼 If we hit $10M MC, I name the kid "Solana"</li>
+                    <li>🚀 If we hit $100M MC, we create a Degen Family Fund</li>
+                </ul>
+            </div>
+        </section>
 
-            <h3>Phase 2: The Pump & Escape Fund</h3>
-            <p>🚀 Launch $PREGGY on pump.fun<br>
-               🚀 Convince degens that my life depends on this<br>
-               🚀 Hope for a 100x before her dad finds out</p>
+        <section class="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">FAQ (Freaking Asked Questions)</h2>
+            <div class="faq-item">
+                <h3>❓ Is this a joke?</h3>
+                <p>No, my life is literally on the line.</p>
+            </div>
+            <div class="faq-item">
+                <h3>❓ Will this moon?</h3>
+                <p>Depends on how desperate CT is.</p>
+            </div>
+            <div class="faq-item">
+                <h3>❓ What if this flops?</h3>
+                <p>Then I'm calling my lawyer. Wait, I can't afford one.</p>
+            </div>
+            <div class="faq-item">
+                <h3>❓ Why should I buy?</h3>
+                <p>Because you like chaos and helping desperate degens.</p>
+            </div>
+        </section>
 
-            <h3>Phase 3: ???</h3>
-            <p>🤰 If we hit $1M MC, I propose<br>
-               🍼 If we hit $10M MC, I name the kid “Solana”<br>
-               🚀 If we hit $100M MC, we create a Degen Family Fund for other unexpected “life events”</p>
-        </div>
+        <section aria-labelledby="token-info" class="token-info">
+            <h2 id="token-info">Token Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Contract</h3>
+                    <p class="mono">Coming Soon</p>
+                </div>
+                <div class="info-item">
+                    <h3>Total Supply</h3>
+                    <p>1,000,000,000</p>
+                </div>
+            </div>
+        </section>
 
-        <h2>Preggy Updates Coming Soon:</h2>
-        <p>Stay tuned for the pregnancy test, her dad's reaction, and my escape plan as we navigate this wild ride together.</p>
+        <section class="final-words" aria-labelledby="final-heading">
+            <h2 id="final-heading">Final Words:</h2>
+            <p>This is not just another token launch - it's my lifeline.<br>
+            I'm trusting CT, the gods of crypto, and sheer degen luck to help me flip my fate.<br>
+            Buy <span class="highlight">$PREGGY</span>, share this story, and join the wildest, most desperate ride of your life.</p>
 
-        <h2>FAQ (Freaking Asked Questions)</h2>
-        <div class="faq">
-            <p>❓ Is this a joke? <br> No, my life is on the line.</p>
-            <p>❓ Will this moon? <br> Depends on how desperate CT is.</p>
-            <p>❓ What if this flops? <br> Then I’m calling my lawyer. Wait, I can’t afford one.</p>
-            <p>❓ Why should I buy? <br> Because you like chaos.</p>
-        </div>
+            <p>Let's turn this disaster into a degen legend. Let's f***ing go. 🔥🔥🔥</p>
+        </section>
 
-        <h2>Final Words:</h2>
-        <p>This is not just another token launch - it’s my lifeline.<br>
-        I’m trusting CT, the gods of crypto, and sheer degen luck to help me flip my fate.<br>
-        Buy <span class="highlight">$PREGGY</span>, share this story, and join the wildest, most desperate ride of your life.</p>
-
-        <p>Let’s turn this disaster into a degen legend. Let’s f***ing go. 🔥🔥🔥</p>
-
-        <div class="footer">
-            <p>💬 Join the conversation: <a href="https://x.com/preggytoken">Twitter</a> | <a href="https://t.me/PREGGYTOKEN">Telegram</a></p>
-            <p>&copy; 2025 $PREGGY - All rights degenerated.</p>
-        </div>
-    </div>
-
+        <footer class="footer">
+            <p>&copy; 2025 $PREGGY - All rights reserved.</p>
+        </footer>
+    </main>
 </body>
 </html>
