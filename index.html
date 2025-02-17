@@ -11,10 +11,9 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' http[...]">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https: ws:;">
     <title>$PREGGY - The Survival Token</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="game.js" defer></script>
     <script src="main.js" defer></script>
 </head>
 <body>
@@ -54,38 +53,6 @@
             <p class="highlight-box">🚀 We're launching a sh*tcoin.</p>
             <p>$PREGGY is my last hope. Either this token pumps, or I'm doomed.<br>
             This isn't just a meme. This is a survival fund.</p>
-        </section>
-
-        <!-- Updated Game Section -->
-        <section class="escape-game" aria-labelledby="game-heading">
-            <h2 id="game-heading">🎮 Run From Responsibility!</h2>
-            <p class="highlight-box">🏃 Collect 💰 and avoid 👮👶🤰</p>
-            <div class="game-container">
-                <canvas id="gameCanvas" width="320" height="480"></canvas>
-                <div class="game-controls">
-                    <div class="game-info">
-                        <div class="game-stats">
-                            <span id="score">Score: 0</span>
-                            <span id="highscore">Best: 0</span>
-                            <span id="level">Level: 1</span>
-                        </div>
-                        <div class="lives-display" id="lives">
-                            <span>❤️❤️❤️</span>
-                        </div>
-                    </div>
-                    <button id="startGame" class="game-button">🏃 Start Running!</button>
-                    <div class="mobile-controls">
-                        <button id="leftButton" class="control-button">⬅️</button>
-                        <button id="rightButton" class="control-button">➡️</button>
-                    </div>
-                </div>
-            </div>
-            <div class="game-instructions">
-                <p>🎯 Collect 💰 $PREGGY tokens for points</p>
-                <p>❌ Avoid: 👮 Angry Cop Dad | 👶 Baby | 🤰 Baby Mama</p>
-                <p>⌨️ Use ⬅️ ➡️ arrows or buttons to move</p>
-                <p>❤️ You have 3 lives - Don't get caught!</p>
-            </div>
         </section>
 
         <section class="roadmap" aria-labelledby="roadmap-heading">
@@ -150,6 +117,12 @@
             </div>
         </section>
 
+        <!-- Funny Note Section -->
+        <section class="funny-note">
+            <h2>Catch the Police Dad!</h2>
+            <p>If you can catch the police dad, we'll give you a $4 reward! (We took it from the diaper fund 😅). No cheating!</p>
+        </section>
+
         <section class="final-words" aria-labelledby="final-heading">
             <h2 id="final-heading">Final Words:</h2>
             <p>This is not just another token launch - it's my lifeline.<br>
@@ -163,5 +136,7 @@
             <p>&copy; 2025 $PREGGY - All rights reserved.</p>
         </footer>
     </main>
+    <!-- Adding the running police dad image -->
+    <img src="image.jpg" id="police-dad" alt="Police Dad" class="running-police-dad">
 </body>
 </html>
