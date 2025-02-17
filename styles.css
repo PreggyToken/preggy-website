@@ -77,7 +77,7 @@ body {
     top: 0;
     right: -100%;
     height: 100vh;
-    width: 250px;
+    width: 300px;
     background: rgba(0, 0, 0, 0.95);
     padding: 80px 20px 20px;
     transition: right 0.3s ease;
@@ -247,108 +247,19 @@ section {
     border-top: 1px solid rgba(255, 105, 180, 0.2);
 }
 
-/* Escape Game Styles */
-.escape-game {
-    text-align: center;
-    margin: 2rem auto;
-    padding: 1rem;
-    max-width: 500px;
-    background: rgba(255, 192, 203, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
-}
-
-.game-container {
-    padding: 1rem;
-    border-radius: 10px;
-    margin: 1rem auto;
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 0 10px rgba(255, 105, 180, 0.3);
-}
-
-#gameCanvas {
-    background: linear-gradient(to bottom, #1a1a1a, #000000);
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgba(255, 105, 180, 0.3);
-}
-
-.game-controls {
-    margin-top: 1rem;
-}
-
-.game-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    text-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
-}
-
-.game-button {
-    background: linear-gradient(45deg, #ff69b4, #ff1493);
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    font-size: 1.2rem;
-    border-radius: 5px;
+/* Running Police Dad */
+.running-police-dad {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.game-button:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.3);
-}
-
-.game-button:active {
-    transform: translateY(1px);
-}
-
-.mobile-controls {
-    display: none;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-.control-button {
-    background: linear-gradient(45deg, #ff69b4, #ff1493);
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
+    z-index: 1000;
+    transition: top 0.3s, left 0.3s;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
-    cursor: pointer;
-    touch-action: manipulation;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-}
-
-.control-button:active {
-    transform: scale(0.95);
-    background: linear-gradient(45deg, #ff1493, #ff69b4);
-}
-
-.game-instructions {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 105, 180, 0.2);
-}
-
-.game-instructions p {
-    margin: 0.5rem 0;
 }
 
 /* Responsive Design */
@@ -365,22 +276,7 @@ section {
         font-size: 1.5rem;
     }
 
-    .mobile-controls {
-        display: flex;
-    }
-
     .info-grid {
         grid-template-columns: 1fr;
     }
-}
-
-/* Animations */
-@keyframes glow {
-    0% { text-shadow: 0 0 5px rgba(255, 105, 180, 0.5); }
-    50% { text-shadow: 0 0 20px rgba(255, 105, 180, 0.8); }
-    100% { text-shadow: 0 0 5px rgba(255, 105, 180, 0.5); }
-}
-
-.highlight {
-    animation: glow 2s ease-in-out infinite;
 }
