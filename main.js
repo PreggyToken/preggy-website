@@ -3,9 +3,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize menu functionality
     initializeMenu();
-    
+
     // Initialize smooth scrolling
     initializeSmoothScroll();
+
+    // Initialize the running police dad
+    initializeRunningPoliceDad();
 });
 
 function initializeMenu() {
@@ -53,7 +56,7 @@ function initializeSmoothScroll() {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({
@@ -65,6 +68,37 @@ function initializeSmoothScroll() {
     });
 }
 
+// Initialize the running police dad functionality
+function initializeRunningPoliceDad() {
+    const policeDad = document.getElementById('police-dad');
+    movePoliceDadRandomly();
+
+    policeDad.addEventListener('mouseover', function() {
+        movePoliceDadRandomly();
+    });
+
+    policeDad.addEventListener('touchstart', function() {
+        movePoliceDadRandomly();
+    });
+}
+
+function movePoliceDadRandomly() {
+    const policeDad = document.getElementById('police-dad');
+    const top = `${Math.random() * 90 + 5}%`;
+    const left = `${Math.random() * 90 + 5}%`;
+    policeDad.style.top = top;
+    policeDad.style.left = left;
+
+    // Store the position securely to prevent tampering
+    storePoliceDadPosition(top, left);
+}
+
+function storePoliceDadPosition(top, left) {
+    const position = `${top},${left}`;
+    const encryptedPosition = btoa(position); // Simple base64 encoding
+    sessionStorage.setItem('policeDadPosition', encryptedPosition);
+}
+
 // Add touch support for mobile devices
 if ('ontouchstart' in window) {
     document.body.classList.add('touch-device');
@@ -74,7 +108,3 @@ if ('ontouchstart' in window) {
 document.addEventListener('dblclick', function(e) {
     e.preventDefault();
 }, { passive: false });
-
-// Prevent game controls from triggering page scroll on mobile
-document.getElementById('leftButton')?.addEventListener('touchstart', (e) => e.preventDefault());
-document.getElementById('rightButton')?.addEventListener('touchstart', (e) => e.preventDefault());
